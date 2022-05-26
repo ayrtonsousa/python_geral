@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "geraLog.py", line 4, in <module>
+    raise Exception('Isso e uma mensagem de erro')
+Exception: Isso e uma mensagem de erro
