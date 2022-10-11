@@ -105,7 +105,7 @@ def marca_ponto(area_adversario, area_navios_adversario, coluna, linha):
             print('Tiro na água!')
 
 def checa_navio(area, posicoes, ultima_coluna_jogada):
-    # checa posicoes do adversario e se coluna jogada foi a ultima
+    """ Checa posicoes do adversario e se coluna jogada foi a ultima """
     for key, values in posicoes.items():
         if values['coluna'] == ultima_coluna_jogada:
             #checa se tamanho da area pontuada na coluna e do navio
