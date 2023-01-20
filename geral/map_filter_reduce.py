@@ -35,8 +35,3 @@ print(resultado_total)
 minha_lista2 = [2, 4, 5, 2, 3323, 2, 400, 6754, 77, 2000]
 maior_valor = reduce(lambda x, y: x if (x > y) else y, minha_lista2)
 print(maior_valor)
-
-
-#inverter ordem maneira simples
-string1 = 'Olá mundo'
-print(string1[::-1])

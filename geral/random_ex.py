@@ -1,6 +1,5 @@
 import random
 
-from coreapi import Object
 
 # random retorna entre 0.0 e 1 (exceto o 1)
 print(random.random())
