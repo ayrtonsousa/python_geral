@@ -26,5 +26,3 @@ def find_two_sum(numbers, target_sum):
 
 if __name__ == "__main__":
     print(find_two_sum([3, 1, 5, 7, 5, 9], 10))
-
-# https://www.testdome.com/tests/python-django-online-test/224

@@ -3,17 +3,24 @@ from classe_personagens.injection_dependency import ataque_fogo
 from classe_personagens.observers import VidaStatusObserver, FimJogoObserver
 
 
-classe_personagem = get_classe_personagem('mago')
-personagem1 = classe_personagem('Ayrton', 26)
-personagem1.attach(VidaStatusObserver())
-personagem1.attach(FimJogoObserver())
+if __name__ == '__main__':
+    # Criação personagem
+    classe_personagem = get_classe_personagem('mago')
+    personagem1 = classe_personagem('Ayrton', 27)
+    personagem1.attach(VidaStatusObserver())
+    personagem1.attach(FimJogoObserver())
 
-print(personagem1)
-print(personagem1.ataque_basico())
-print(personagem1.ataque_especial_extra(ataque_fogo(personagem1)))
-print(personagem1.ataque_especial())
+    # Dados básicos
+    print(personagem1)
+    print(f'Inventário: {personagem1.inventario}')
 
-personagem1.dano(10)
-personagem1.dano(40)
-personagem1.dano(45)
-personagem1.dano(10)
+    # Retorna nome dos ataques
+    print(personagem1.ataque_basico())
+    print(personagem1.ataque_especial_extra(ataque_fogo(personagem1)))
+    print(personagem1.ataque_especial())
+
+    # Faz personagem receber danos até esgotar sua vida
+    personagem1.dano(10)
+    personagem1.dano(40)
+    personagem1.dano(45)
+    personagem1.dano(10)

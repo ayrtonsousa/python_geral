@@ -13,9 +13,10 @@ class Mago(PersonagemBase):
         return 'Cajadada Especial'
 
     def itens_iniciais(self):
+        super().itens_iniciais()
         itens_mago = {
             'pocao_magia': 1
         }
         self.inventario.update(itens_mago)
-        return super().itens_iniciais()
+        return self.inventario
     

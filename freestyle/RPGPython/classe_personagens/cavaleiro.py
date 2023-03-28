@@ -13,8 +13,9 @@ class Cavaleiro(PersonagemBase):
         return 'Espadada especial'
 
     def itens_iniciais(self):
-        itens_cavaleiro = {
+        super().itens_iniciais()
+        itens_mago = {
             'espada_afiada': 1
         }
-        self.inventario.update(itens_cavaleiro)
-        return super().itens_iniciais()
+        self.inventario.update(itens_mago)
+        return self.inventario

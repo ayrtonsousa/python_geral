@@ -102,11 +102,13 @@ class PersonagemBase(metaclass=ABCMeta):
             'pocao_cura_veneno': 1
         }
         self.inventario.update(itens)
-        return itens
+        return self.inventario
 
     def attach(self, observer):
         """ Vincular a um observer """
-        print("Personagem vinculado a um observer")
+        print(
+            f"Personagem vinculado a observer: {observer.__class__.__name__}"
+        )
         self._observadores.append(observer)
 
     def detach(self, observer):
