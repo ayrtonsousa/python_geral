@@ -23,3 +23,13 @@ except Exception as e:
     print("tratamento generico")
 
 print("Programa encerrado")
+
+
+# Mais simples usando suppress, sem interromper o codigo
+from contextlib import suppress
+
+with suppress(ZeroDivisionError):
+    result = 1 / 0
+    print(result)
+
+print("Programa novamente encerrado")
