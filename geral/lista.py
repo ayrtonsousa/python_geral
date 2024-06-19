@@ -1,6 +1,5 @@
 items = ['ola', 'tudo', 'bem']
 
-
 # sem enumerate
 # index = 0
 # for i in items:
@@ -10,6 +9,14 @@ items = ['ola', 'tudo', 'bem']
 # usando enumerate melhor
 for index, i in enumerate(items):
     print(f'index:{index} item:{i}')
+
+
+# usando range para tabuada
+def tabuada(x):
+    for i in range(1, 11):
+        print(f"{x} x {i}: {x * i}")
+
+tabuada(9)
 
 
 #zip para percorrer 2 listas juntas
@@ -31,14 +38,23 @@ print(lista[0])
 # ultimo lista
 print(lista[-1])
 
-# lista apenas os dois ultimos
-print(lista[-2:])
+# comeca na posicao x
+print(lista[3:])
+
+# vai ate posicao x
+print(lista[:3])
 
 # lista exceto os dois ultimos
 print(lista[:-2])
 
+# lista apenas os dois ultimos
+print(lista[-2:])
+
 # pular dois em dois
 print(lista[::2])
+
+# pular dois em dois, invertido
+print(lista[::-2])
 
 # posicao 1 ao 4 pulando em 2 
 print(lista[1:4:2])
@@ -86,4 +102,34 @@ print(string1[::-1])
 # aparicoes na lista do numero 3
 lista = [1,1,2,3,3,3,3,4]
 print(lista.count(3))
+
+
+# ordenar por idade
+nomes = [
+    {'nome': 'luciano', 'idade': 29},
+    {'nome': 'calleri', 'idade': 31},
+    {'nome': 'james', 'idade': 32},
+    {'nome': 'ferreira', 'idade': 26},
+    {'nome': 'williams gomes', 'idade': 20},
+]
+
+nomes.sort(key= lambda item:item['idade'])
+print(nomes)
+
+# ordernar lista com dicionariso por data
+from datetime import datetime
+
+partidas = [
+    {'data':'2024-01-01','rival':'palmeiras'},
+    {'data':'2024-01-07','rival':'ldu'},
+    {'data':'2024-01-03','rival':'corinthians'},
+    {'data':'2023-06-05','rival':'criciuma'},
+    {'data':'2023-03-01','rival':'coritiba'},
+    {'data':'2023-12-31','rival':'santos'},
+    {'data':'2023-11-01','rival':'atlhetico'}
+]
+
+partidas.sort(key=lambda item: datetime.strptime(item['data'], "%Y-%m-%d"))
+
+print(partidas)
 

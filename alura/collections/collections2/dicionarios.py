@@ -58,14 +58,38 @@ dicionario = defaultdict(int)
 dicionario['teste']
 print(dicionario) 
 
+#usando o Counter para contar numero de aparicoes
+print(Counter(meu_texto.split()))
+
 #usando defaultdict em objetos
 class Conta:
     def __init__(self):
         print("Criando uma conta")
 
 contas = defaultdict(Conta)
-contas[15]
+
+print(len(contas)) # nenhuma conta criada 
+contas[15] 
+print(len(contas)) # aparece uma nova conta
 print(contas)
 
-#usando o Counter para contar numero de aparaicoes
-print(Counter(meu_texto.split()))
+
+# Combinar dicionarios
+
+from collections import ChainMap
+
+# forma convencional
+merged_dict = {}
+dict1 = {"id": 1}
+dict2 = {"name": 2}
+dict3 = {"description": "teste teste"}
+
+for d in (dict1, dict2, dict3):
+    merged_dict.update(d)
+
+print(merged_dict)
+
+# usando ChainMap
+merged_dict = dict(ChainMap(dict1, dict2, dict3))
+
+print(merged_dict)

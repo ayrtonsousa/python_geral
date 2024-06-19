@@ -20,7 +20,7 @@ class ExtratorArgumentosUrl:
     def __eq__(self,outra_instancia):
         return self.url == outra_instancia.url
 
-    #exemplo de metodo estatico, opcao ao metodo de classe que teria que usar self para ser usado na instancia da classe
+    #exemplo de metodo estatico, sem precisar ser instanciado e sem precisar do self pois e usado direto da classe
     @staticmethod
     def url_valida(url):
         if url and url.startswith('https://bytebank.com'):
@@ -50,7 +50,7 @@ class ExtratorArgumentosUrl:
         
         return moeda_origem, moeda_destino
 
-    def encontra_indice_inicial(self,moeda):
+    def encontra_indice_inicial(self, moeda):
         return self.url.find(moeda) + len(moeda)
 
     def troca_moeda_origem(self):

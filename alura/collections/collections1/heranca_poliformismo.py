@@ -1,5 +1,6 @@
 from abc import ABCMeta, abstractmethod
 
+
 class Conta(metaclass=ABCMeta):
     def __init__(self, codigo):
         self._codigo = codigo
@@ -21,11 +22,13 @@ class ContaCorrente(Conta):
     def passa_o_mes(self):
         self._saldo -= 2
 
+
 class ContaPoupanca(Conta):
 
     def passa_o_mes(self):
         self._saldo *= 1.01
         self._saldo -= 3
+
 
 class ContaInvestimento(Conta):
     pass

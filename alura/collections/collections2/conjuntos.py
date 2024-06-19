@@ -18,7 +18,7 @@ print(type(usuarios_machine_learning))
 for usuario in usuarios_data_science:
     print(usuario)
 
-#exibindo elementos que existem em um ou outro e sem duplicadas
+#exibindo somente os elementos que existem nos 2, sem duplicadas
 print(usuarios_data_science | usuarios_machine_learning)
 
 #exibindo somente elementos que existem entre si
@@ -27,7 +27,7 @@ print(usuarios_data_science & usuarios_machine_learning)
 #removendo elementos que existam nas duas listas
 print(usuarios_data_science - usuarios_machine_learning)
 
-#exibindo somente elementos exclusivos que nao existem nos outros conjuntos,
+#exibindo somente elementos exclusivos que nao existem nos outros conjuntos
 print(usuarios_data_science ^ usuarios_machine_learning)
 
 

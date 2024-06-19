@@ -14,3 +14,23 @@ print(list(lista_ordenacao_reversa))
 lista.sort()
 lista.sort(reverse=True)
 print(lista)
+
+list_dict = [
+    {"id": 8, "name": "ayrton"},
+    {"id": 9, "name": "ayrtony"},
+    {"id": 3, "name": "byrtonb"},
+    {"id": 5, "name": "cyrtond"},
+    {"id": 6, "name": "fyrtonf"},
+    {"id": 7, "name": "zyrtonh"},
+    {"id": 1, "name": "yrtonj"},
+    {"id": 2, "name": "hayrton"},
+]
+
+list_dict = sorted(list_dict, key=lambda d: d['name']) 
+
+print(list_dict)
+
+
+fruits = ['grape', 'Raspberry', 'apple', 'Banana']
+print(sorted(fruits, key=len, reverse=True)) #ordem do maior pro menor
+print(sorted(fruits, key=str.lower)) #ordem do menor pro maior ignorando o uppercase
