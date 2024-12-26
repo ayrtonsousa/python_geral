@@ -31,7 +31,7 @@ print(usuarios_data_science - usuarios_machine_learning)
 print(usuarios_data_science ^ usuarios_machine_learning)
 
 
-#adicionando elementos no conjunti
+#adicionando elementos no conjunto
 usuarios = {1, 5, 76, 34, 52, 13, 17}
 print(len(usuarios))
 

@@ -74,4 +74,6 @@ if __name__ == '__main__':
     baguete = Baguete()
     baguete = Salame(baguete)
     baguete = Calabresa(baguete)
+    """abaixo ao chamar a property, ele roda cada instancia decorada"""
+    print(frances.nome, frances.valor())
     print(baguete.nome, baguete.valor())

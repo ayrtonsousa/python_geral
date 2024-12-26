@@ -14,10 +14,10 @@ if __name__ == '__main__':
     print(personagem1)
     print(f'Inventário: {personagem1.inventario}')
 
-    # Retorna nome dos ataques
-    print(personagem1.ataque_basico())
-    print(personagem1.ataque_especial_extra(ataque_fogo(personagem1)))
-    print(personagem1.ataque_especial())
+    # Gasta energia do personagem
+    personagem1.ataque_basico()
+    personagem1.ataque_especial_extra(ataque_fogo(personagem1))
+    personagem1.ataque_especial()
 
     # Faz personagem receber danos até esgotar sua vida
     personagem1.dano(10)

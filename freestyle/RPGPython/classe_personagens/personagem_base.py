@@ -1,7 +1,19 @@
 from abc import ABCMeta, abstractmethod
 
 
-class PersonagemBase(metaclass=ABCMeta):
+class PersonagemTemplate(metaclass=ABCMeta):
+    @abstractmethod
+    def ataque_basico(self):
+        "Ataque básico do personagem"
+        ...
+
+    @abstractmethod
+    def ataque_especial(self):
+        "Ataque especial do personagem"
+        ...
+
+
+class PersonagemBase(PersonagemTemplate):
 
     def __init__(self, nome, idade):
         self._nome = nome
@@ -78,16 +90,6 @@ class PersonagemBase(metaclass=ABCMeta):
     @inventario.setter
     def inventario(self, dict_itens):
         self._inventario.update(dict_itens)
-
-    @abstractmethod
-    def ataque_basico(self):
-        "Ataque básico do personagem"
-        ...
-
-    @abstractmethod
-    def ataque_especial(self):
-        "Ataque especial do personagem"
-        ...
 
     def ataque_especial_extra(self, funcao=None):
         "Ataque especial extra do personagem"

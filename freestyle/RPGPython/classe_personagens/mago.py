@@ -6,11 +6,11 @@ class Mago(PersonagemBase):
 
     @checa_energia(custo_energia=30)
     def ataque_basico(self):        
-        return 'Cajadada'
+        print('Cajadada')
 
     @checa_energia(custo_energia=50)
     def ataque_especial(self):
-        return 'Cajadada Especial'
+        print('Cajadada Especial')
 
     def itens_iniciais(self):
         super().itens_iniciais()

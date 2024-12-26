@@ -1,3 +1,18 @@
+
+"""
+Operações de I/O Intensivo: Ideal para tarefas que envolvem muita espera por operações de I/O, como chamadas de rede ou leitura/escrita de arquivos.
+Múltiplas Operações Simultâneas: Útil quando você precisa realizar várias operações ao mesmo tempo, como consultas a várias APIs.
+Melhorar a Responsividade: Em aplicativos que exigem alta responsividade, como servidores web ou interfaces gráficas, o código assíncrono pode ajudar a evitar bloqueios.
+"""
+
+"""async def say_hello():
+    print("Hello")
+    await asyncio.sleep(1) #Suspende a execução da função say_hello por 1 segundo sem bloquear a execução de outras operações.
+    print("World")
+
+# Executa a função assíncrona
+asyncio.run(say_hello())"""
+
 # NORMAL 5 segundos
 
 # import time

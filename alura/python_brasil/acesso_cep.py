@@ -1,5 +1,6 @@
 import requests
 
+
 class BuscaEndereco:
     def __init__(self, cep):
         cep = str(cep)
@@ -30,7 +31,7 @@ class BuscaEndereco:
             dados['uf'],
         )
 
-cep = '06852200'
+cep = '06852000'
 
 objeto_cep = BuscaEndereco(cep)
 print(objeto_cep)

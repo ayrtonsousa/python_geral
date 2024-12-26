@@ -44,7 +44,6 @@ operacoes = {
     4 : divisao,
 }
 
-
 def get_operacao():
     print(
         """
@@ -59,7 +58,6 @@ def get_operacao():
 
     operacao = operacoes.get(operacao_escolhida, None)
     return operacao
-
 
 while True:
     operacao = get_operacao()

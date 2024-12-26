@@ -3,7 +3,7 @@ from estatistica_detalhada import EstatisticaDetalhada
 from estatistica_resumida import EstatisticaResumida
 
 
-fila_teste = FabricaFila.pega_fila('prioritaria')
+fila_teste: FabricaFila = FabricaFila.pega_fila('prioritaria')
 fila_teste.atualiza_fila()
 fila_teste.atualiza_fila()
 

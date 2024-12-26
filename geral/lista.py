@@ -113,7 +113,7 @@ nomes = [
     {'nome': 'williams gomes', 'idade': 20},
 ]
 
-nomes.sort(key= lambda item:item['idade'])
+nomes.sort(key=lambda item:item['idade'])
 print(nomes)
 
 # ordernar lista com dicionariso por data
