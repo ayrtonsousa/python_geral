@@ -133,3 +133,15 @@ partidas.sort(key=lambda item: datetime.strptime(item['data'], "%Y-%m-%d"))
 
 print(partidas)
 
+# ordenando uma lista dentro de outra 
+times = [
+    {'time':'spfc','partidas':['2025-03-30','2025-02-01','2025-12-05','2025-06-07']},
+    {'time':'palmeiras','partidas':['2025-03-23','2025-05-07','2025-11-10','2025-08-09']},
+    {'time':'santos','partidas':['2025-01-13','2025-01-30','2025-07-25','2025-02-20']},
+    {'time':'corinthians','partidas':['2025-12-30','2025-05-02','2025-11-26','2024-09-07']},
+]
+
+# precisa usar list depois do map
+list(map(lambda times: times['partidas'].sort(key=lambda x: datetime.strptime(x, '%Y-%m-%d')), times))
+
+print(times)

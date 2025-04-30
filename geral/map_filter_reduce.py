@@ -7,6 +7,9 @@ lista = [1,2,3,4,5]
 
 print(list(map(multiplica_por_2, lista)))
 
+# usando lambda
+print(list(map(lambda x:x * 2, lista)))
+
 
 # usando filter
 def maior_que_zero(x):

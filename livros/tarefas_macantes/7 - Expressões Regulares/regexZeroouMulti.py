@@ -6,7 +6,7 @@ mo1 = batRegex.search('The Adventures of Batman')
 print(mo1.group())
 print()
 
-#Busca em uniac instancia
+#Busca em unica instancia
 mo2 = batRegex.search('The Adventures of Batwoman')
 print(mo2.group())
 print()
