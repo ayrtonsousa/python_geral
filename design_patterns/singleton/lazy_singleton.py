@@ -17,8 +17,8 @@ class Singleton:
         return cls.__instance
 
 
-s1 = Singleton() # classe e iniciada, mas obj nao e criado
+s1 = Singleton() # classe e iniciada, mas obj nao e criado ainda
 
-print(f'Objeto criado agora: {Singleton.get_instance()}')
+print(f'Objeto criado agora: {Singleton.get_instance()}') # criado nesse momento
 
-s2 = Singleton() # instancia ja criada
+s2 = Singleton() # usa instancia ja criada, sem criar na memoria uma segunda

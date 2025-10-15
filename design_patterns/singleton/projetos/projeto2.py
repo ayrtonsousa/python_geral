@@ -34,7 +34,9 @@ print('Cronograma de checagem de sanidade dos servidores A...')
 for srv in range(4):
     sc1.checar_servidor(srv)
 
+# aqui conseguimos modificar e ler a primeira instancia criada em
+# memoria, mesmo utilizando outra instancia
 sc2.mudar_servidor()
-print('Cronograma de checagem de sanidade dos servidores A...')
+print('Cronograma de checagem de sanidade dos servidores B...')
 for srv in range(4):
     sc2.checar_servidor(srv)

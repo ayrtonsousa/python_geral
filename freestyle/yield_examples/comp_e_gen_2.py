@@ -10,7 +10,7 @@ one_million = 10**6
 
 list_compr = [x for x in range(one_million)]
 print(getsizeof(list_compr))
-# >> 8697464 (claro que ira variar o tempo)
+# >> 8697464 (varia com o tempo obviamente)
 
 list_gener = (x for x in range(one_million))
 print(getsizeof(list_gener))

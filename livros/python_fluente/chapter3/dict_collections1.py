@@ -14,7 +14,7 @@ with open(sys.argv[1], encoding='utf-8') as fp:
             word = match.group()
             column_no = match.start() + 1
             location = (line_no, column_no)
-            # isso n e elegante foi apenas para ilustrar a questao
+            # isso nao e elegante foi apenas para ilustrar a questao
             occurrences = index.get(word, [])
             occurrences.append(location)
             index[word] = occurrences
@@ -59,7 +59,7 @@ with open(sys.argv[1], encoding='utf-8') as fp:
 for word in sorted(index, key=str.upper):
     print(word, index[word])
 
-# 3.7 classe converte chaves que n sejam strings para str na consulta
+# 3.7 classe converte chaves que nao sejam strings para str na consulta
 class StrKeyDict0(dict):
     def __missing__(self, key):
         if isinstance(key, str):
@@ -75,7 +75,7 @@ class StrKeyDict0(dict):
     def __contains__(self, key):
         return key in self.keys() or str(key) in self.keys()
 
-# 3.6 buscar chave q nao seja string StrKeyDict0 a convertera para str se nao for encontrada(esta depois da 3.7 pra mostrar apos class ser criada)
+# 3.6 buscar chave que nao seja string StrKeyDict0 a convertera para str se nao for encontrada(esta depois da 3.7 pra mostrar apos class ser criada)
 d = StrKeyDict0([('2', 'two'), ('4', 'four')])
 
 # usando d[key]

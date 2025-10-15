@@ -10,16 +10,13 @@
 # moedas de R$1.00, R$0,50,  R$0,25, R$0,10, R$0,05.
 
 cedulas = [100, 50, 20, 10, 5, 2]
-moedas = [1, 0.50, 0.25, 0.10, 0.05]
+moedas = [0.50, 0.25, 0.10, 0.05] # moeda de 1 real tratada ao final da operacao
 troco_moedas = []
 troco_cedulas = []
 
 
-valor_compra = 153.36
-valor_pago = 160
-
-# valor_compra = 100.56
-# valor_pago = 1000
+valor_compra = 11.38
+valor_pago = 15
 
 if valor_pago < valor_compra:
     print("Valor pago menor que compra")
@@ -55,5 +52,5 @@ else:
     print('Moedas:', troco_moedas)
     print('Resto pra bala?:', round(resto_moedas,2))
 
-    print('Total-Pago:', troco)
-    print('Igual a Total-Pago?', round(sum(troco_cedulas) + sum(troco_moedas) + round(resto_moedas,2),2))
+    print('Total de Troco:', troco)
+    print('Igual a Total troco?', round(sum(troco_cedulas) + sum(troco_moedas) + round(resto_moedas,2),2))

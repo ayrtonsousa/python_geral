@@ -13,6 +13,6 @@ def task2():
         print('task 2')
         x += 1
 
-# Onde a ordem dos prints sera misturado, pois existe outro thread executando ao msm tempo
+# A ordem dependera da disponibilidade do hardware, assim tendo ordens diferentes
 threading.Thread(target=task1).start()
 task2()

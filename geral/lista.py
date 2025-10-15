@@ -27,9 +27,6 @@ produtos = ['bala', 'bone', 'camiseta']
 for preco, produto in zip(precos, produtos):
     print(f'preco:{preco} produto:{produto}')
 
-
-# tira de map e reduce do python geral o inverter e concatenar com lista.py existente
-
 lista = [1,2,3,4,5,6,7,8,9,10]
 
 # posicao 
@@ -116,7 +113,7 @@ nomes = [
 nomes.sort(key=lambda item:item['idade'])
 print(nomes)
 
-# ordernar lista com dicionariso por data
+# ordernar lista com dicionario por data
 from datetime import datetime
 
 partidas = [
@@ -126,7 +123,7 @@ partidas = [
     {'data':'2023-06-05','rival':'criciuma'},
     {'data':'2023-03-01','rival':'coritiba'},
     {'data':'2023-12-31','rival':'santos'},
-    {'data':'2023-11-01','rival':'atlhetico'}
+    {'data':'2023-11-01','rival':'cuiaba'}
 ]
 
 partidas.sort(key=lambda item: datetime.strptime(item['data'], "%Y-%m-%d"))
@@ -142,6 +139,6 @@ times = [
 ]
 
 # precisa usar list depois do map
-list(map(lambda times: times['partidas'].sort(key=lambda x: datetime.strptime(x, '%Y-%m-%d')), times))
+list(map(lambda time: time['partidas'].sort(key=lambda x: datetime.strptime(x, '%Y-%m-%d')), times))
 
 print(times)

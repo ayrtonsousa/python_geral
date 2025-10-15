@@ -1,5 +1,6 @@
 from typing import List, Tuple
 
+
 class Curso:
 
     def __init__(self: object, nome: str = 'Curso Padrão', carga_horaria: int = 45):

@@ -22,6 +22,11 @@ print(list(filter(maior_que_zero, valores)))
 # usando lambda ao inves de criar a funcao do ex. anterior
 print(list(filter(lambda x: x > 0, valores)))
 
+# somente impares
+print(list(filter(lambda x:x % 2 > 0, [1,2,3,4,5,6,7,8,9])))
+
+# somente pares
+print(list(filter(lambda x:x % 2 == 0, [1,2,3,4,5,6,7,8,9])))
 
 # usando reduce
 # x e y são os primeiros valores da lista
